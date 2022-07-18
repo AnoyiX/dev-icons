@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Deploy
-      - uses: BogDAAAMN/deta-deploy-action@v1.0.1
+        uses: BogDAAAMN/deta-deploy-action@v1.0.1
         with:
           deta-access-token: ${{ secrets.DETA_TOKEN }}
           deta-name: 'dev-icons'
