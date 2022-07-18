@@ -1,5 +1,6 @@
 name = "dev-icons"
 type = "webpack"
+main = "./index.js"
 workers_dev = true
 compatibility_flags = []
 compatibility_date = "2022-07-18"
