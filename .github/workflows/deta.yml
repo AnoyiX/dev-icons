@@ -27,3 +27,5 @@ jobs:
           export DETA_ACCESS_TOKEN=${{ secrets.DETA_TOKEN }}
           ~/.deta/bin/deta new --project ${{ github.event.repository.name }}
           ~/.deta/bin/deta deploy
+          ~/.deta/bin/deta auth disable
+          ~/.deta/bin/deta visor enable
