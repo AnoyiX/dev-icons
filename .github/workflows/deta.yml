@@ -12,9 +12,18 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      # Install Deta CLI as per docs
+      # https://docs.deta.sh/docs/cli/install
+      - name: Install Deta CLI
+        shell: bash
+        run: |
+          curl -fsSL https://get.deta.dev/cli.sh | sh
+      # Using the access token and existing Deta micro and project,
+      # clone the micro and copy .deta metadata folder to use it in deploy
+      # https://docs.deta.sh/docs/cli/commands#deta-clone
       - name: Deploy
-        uses: BogDAAAMN/deta-deploy-action@v1.0.1
-        with:
-          deta-access-token: ${{ secrets.DETA_TOKEN }}
-          deta-name: cloud
-          deta-project: dev-icons
+        shell: bash
+        run: |
+          export DETA_ACCESS_TOKEN=${{ secrets.DETA_TOKEN }}
+          ~/.deta/bin/deta new --project ${{ github.event.repository.name }}
+          ~/.deta/bin/deta deploy
