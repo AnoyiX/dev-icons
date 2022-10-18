@@ -8,6 +8,7 @@ ICONS_COLS = 16
 GAP = 48
 ICON_SIZE = 256 + GAP
 PADDING = 0
+SCALE = 48 / 256
 
 # svg files
 FILES = os.listdir('./icons')
@@ -22,7 +23,9 @@ def generate_svg(icon_names, cols, iconBgColor):
     icon_bg_rect = f'<rect xmlns="http://www.w3.org/2000/svg" width="256" height="256" rx="56" fill="#{iconBgColor}"/>' if iconBgColor else ''
     return f"""
     <svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <g transform="scale({SCALE})">
     {''.join([f'<g transform="translate({(index % cols) * ICON_SIZE + PADDING}, {math.floor(index / cols) * ICON_SIZE + PADDING})">{icon_bg_rect}{icon}</g>' for index, icon in enumerate(svgs)])}
+    </g>
     </svg>
     """.strip()
 

@@ -1,25 +1,18 @@
+# ✨ Features
 
-<h3 align="center">Icons for Developer, Powered by DETA ⚡</h3>
-
-<hr>
-
-# Features
-
-- [Features](#features)
-- [Design](#design)
-- [Customization](#customization)
+- [✨ Features](#-features)
+- [🎨 Design](#-design)
+- [🧪 Customization](#-customization)
   - [icons](#icons)
   - [cols](#cols)
   - [iconBgColor](#iconbgcolor)
-- [Icons List](#icons-list)
+- [🎉 Icons List](#-icons-list)
 
-# Design
+# 🎨 Design
 
-I use Figma to design all icons. Each icon size is `256 x 256`, radius is `56`, inline verctor max width or height is `200`, recomended value is `180`.
+See all icons in [Figma](https://www.figma.com/file/9MzhQygAIiTlJj79UbpBHK/DevIcons).
 
-> 🎨 Figma Resource [https://www.figma.com/file/9MzhQygAIiTlJj79UbpBHK/DevIcons](https://www.figma.com/file/9MzhQygAIiTlJj79UbpBHK/DevIcons)
-
-# Customization
+# 🧪 Customization
 
 ## icons
 
@@ -56,7 +49,7 @@ Change the `&iconBgColor=F3F4F6` to fill a rect to each icon.
 
 [![](https://icons.anoyi.com/?iconBgColor=F3F4F6&icons=python,java,docker,kubernetes,html5,css3)](https://anoyi.com/dev-icons)
 
-# Icons List
+# 🎉 Icons List
 
 Please visite [https://anoyi.com/dev-icons](https://anoyi.com/dev-icons) to see all icons with names.
 
