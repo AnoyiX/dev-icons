@@ -15,20 +15,21 @@ ICON_NAMES = {file.replace('.svg', '') for file in FILES}
 ICONS = {file.replace('.svg', '').lower(): Path(f'./icons/{file}').read_text() for file in FILES}
 
 
-def generate_svg(icon_names, cols):
+def generate_svg(icon_names, cols, iconBgColor):
     svgs = [ICONS[x.lower()] for x in icon_names]
     width = min(cols * ICON_SIZE, len(icon_names) * ICON_SIZE) + PADDING - GAP
     height = math.ceil(len(icon_names) / cols) * ICON_SIZE + PADDING - GAP
+    icon_bg_rect = f'<rect xmlns="http://www.w3.org/2000/svg" width="256" height="256" rx="56" fill="#{iconBgColor}"/>' if iconBgColor else ''
     return f"""
     <svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" xmlns="http://www.w3.org/2000/svg" version="1.1">
-    {''.join([f'<g transform="translate({(index % cols) * ICON_SIZE + PADDING}, {math.floor(index / cols) * ICON_SIZE + PADDING})">{icon}</g>' for index, icon in enumerate(svgs)])}
+    {''.join([f'<g transform="translate({(index % cols) * ICON_SIZE + PADDING}, {math.floor(index / cols) * ICON_SIZE + PADDING})">{icon_bg_rect}{icon}</g>' for index, icon in enumerate(svgs)])}
     </svg>
     """.strip()
 
 app = FastAPI()
 
 @app.get("/")
-async def svg(icons: str = '', cols: int = 16):
+async def svg(icons: str = '', cols: int = 16, iconBgColor: str = None):
     """Merge icons to a svg
 
     Args:
@@ -43,7 +44,7 @@ async def svg(icons: str = '', cols: int = 16):
     icon_names = list(filter(lambda x: x in ICON_NAMES, icon_names))
     if not icon_names:
         return Response('', status_code=404)
-    svg = generate_svg(icon_names, cols)
+    svg = generate_svg(icon_names, cols, iconBgColor)
     return Response(svg, media_type='image/svg+xml')
 
 

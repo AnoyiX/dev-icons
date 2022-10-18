@@ -104,7 +104,7 @@
 <stop offset="0.99" stop-color="#800E08"/>
 <stop offset="1" stop-color="#800E08"/>
 </radialGradient>
-<linearGradient id="paint14_linear_36_952" x1="62.227" y1="217.279" x2="47.073" y2="165.863" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint14_linear_36_952" x1="62.227" y1="217.279" x2="47.0729" y2="165.863" gradientUnits="userSpaceOnUse">
 <stop stop-color="#8B2114"/>
 <stop offset="0.43" stop-color="#9E100A"/>
 <stop offset="0.99" stop-color="#B3100C"/>
