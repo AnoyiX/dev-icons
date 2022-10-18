@@ -41,7 +41,7 @@ async def svg(icons: str = '', cols: int = 16, iconBgColor: str = None):
         _type_: svg file
     """
     icon_names = ICON_NAMES if not icons else icons.split(',')
-    icon_names = list(filter(lambda x: x in ICON_NAMES, icon_names))
+    icon_names = list(filter(lambda x: x in [x.lower() for x in ICON_NAMES], [x.lower() for x in icon_names]))
     if not icon_names:
         return Response('', status_code=404)
     svg = generate_svg(icon_names, cols, iconBgColor)
