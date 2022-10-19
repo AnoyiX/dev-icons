@@ -20,7 +20,7 @@ def generate_svg(icon_names, cols, iconBgColor):
     svgs = [ICONS[x.lower()] for x in icon_names]
     width = (min(cols * ICON_SIZE, len(icon_names) * ICON_SIZE) + PADDING - GAP) * SCALE
     height = (math.ceil(len(icon_names) / cols) * ICON_SIZE + PADDING - GAP) * SCALE
-    icon_bg_rect = f'<rect xmlns="http://www.w3.org/2000/svg" width="256" height="256" rx="56" fill="#{iconBgColor}"/>' if iconBgColor else ''
+    icon_bg_rect = f'<rect xmlns="http://www.w3.org/2000/svg" width="256" height="256" rx="58" fill="#{iconBgColor}"/>' if iconBgColor else ''
     return f"""
     <svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" xmlns="http://www.w3.org/2000/svg" version="1.1">
     <g transform="scale({SCALE})">
