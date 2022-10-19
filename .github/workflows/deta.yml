@@ -28,4 +28,5 @@ jobs:
           ~/.deta/bin/deta clone --name ${{ github.event.repository.name }} --project ${{ github.event.repository.name }}
           mv ${{ github.event.repository.name }}/.deta ./
           rm -rf ${{ github.event.repository.name }}/
+          rm -rf tmp/
           ~/.deta/bin/deta deploy
