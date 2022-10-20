@@ -1,16 +1,17 @@
 # ✨ Features
 
 - [✨ Features](#-features)
-- [🎨 Design](#-design)
+- [🧑‍💻 Example](#-example)
 - [🧪 Customization](#-customization)
   - [icons](#icons)
   - [cols](#cols)
   - [iconBgColor](#iconbgcolor)
 - [🎉 Icons List](#-icons-list)
+- [🎨 Figma Resource](#-figma-resource)
 
-# 🎨 Design
+# 🧑‍💻 Example
 
-See all icons in [Figma](https://www.figma.com/file/9MzhQygAIiTlJj79UbpBHK/DevIcons).
+<img src="./example/about.png"/>
 
 # 🧪 Customization
 
@@ -58,3 +59,7 @@ Change the `&iconBgColor=F3F4F6` to fill a rect to each icon.
 Please visite [https://anoyi.com/dev-icons](https://anoyi.com/dev-icons) to see all icons with names.
 
 ![](https://dev-icons.deta.dev/?iconBgColor=f8fafc)
+
+# 🎨 Figma Resource
+
+See all icons in [Figma](https://www.figma.com/file/9MzhQygAIiTlJj79UbpBHK/DevIcons).
